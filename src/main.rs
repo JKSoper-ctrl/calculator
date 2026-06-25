@@ -7,8 +7,16 @@ enum Operator {
     Divide,
 }
 
+const DIVIDER: &str = "---";
+
 fn main() {
+    println!();
+    println!("{}", DIVIDER);
+
+    println!("Hello! Welcome to the calulator! You will be asked for a number, an operator, and then another another number.");
+
     let number1: f64 = loop {
+        println!();
         println!("Provide first number:");
 
         let number_input : String = get_input();
@@ -23,6 +31,7 @@ fn main() {
     };
     
     let operator: Operator = loop {
+        println!();
         println!("Provide operator (+, -, *, /):");
 
         let input_operator: String = get_input();
@@ -40,7 +49,8 @@ fn main() {
     };
 
     let number2: f64 = loop {
-        println!("Provide first number:");
+        println!();
+        println!("Provide second number:");
 
         let number_input : String = get_input();
 
@@ -59,8 +69,14 @@ fn main() {
         Operator::Multiply => number1 * number2,
         Operator::Divide => number1 / number2,
     };
-    println!("Result:");
+
+    println!();
+
+    println!("Answer:");
     println!("{}", result.to_string());
+
+    println!("{}", DIVIDER);
+    println!();
 }
 
 fn get_input() -> String {
