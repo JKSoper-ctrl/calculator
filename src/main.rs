@@ -31,7 +31,7 @@ fn main() {
     println!();
 
     println!("Answer:");
-    println!("{}", result.to_string());
+    println!("{}", result);
 
     println!("{}", DIVIDER);
     println!();
