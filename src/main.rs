@@ -11,7 +11,7 @@ const DIVIDER: &str = "---";
 
 fn main() {
     println!();
-    println!("{}", DIVIDER);
+    println!("{DIVIDER}");
 
     println!("Hello! Welcome to the calulator! You will be asked for a number, an operator, and then another another number.");
 
@@ -31,9 +31,9 @@ fn main() {
     println!();
 
     println!("Answer:");
-    println!("{}", result);
+    println!("{result}");
 
-    println!("{}", DIVIDER);
+    println!("{DIVIDER}");
     println!();
 }
 
@@ -73,5 +73,5 @@ fn get_input() -> String {
     io::stdin()
         .read_line(&mut input_string)
         .expect("Failed to read input");
-    input_string.to_string()
+    input_string
 }
